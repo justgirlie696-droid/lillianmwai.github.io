@@ -1,0 +1,2368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Lillian Wanjiru Mwai | Educator, Researcher & Finance Specialist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a365d;
+            --secondary: #2d74da;
+            --accent: #e53e3e;
+            --light: #f7fafc;
+            --dark: #1a202c;
+            --text: #2d3748;
+            --text-light: #718096;
+            --success: #38a169;
+            --warning: #d69e2e;
+            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --shadow-lg: 0 20px 40px rgba(0,0,0,0.12);
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            --border-radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        h1, h2, h3, h4, h5 {
+            color: var(--primary);
+            margin-bottom: 1.2rem;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 3.5rem;
+            position: relative;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -18px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 5px;
+            background: linear-gradient(90deg, var(--secondary), var(--accent));
+            border-radius: 3px;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+        }
+
+        h4 {
+            font-size: 1.4rem;
+        }
+
+        h5 {
+            font-size: 1.1rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--text);
+            font-weight: 400;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            background: var(--secondary);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(45, 116, 218, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .btn:hover:before {
+            left: 100%;
+        }
+
+        .btn:hover {
+            background: #1c5bb8;
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(45, 116, 218, 0.4);
+        }
+
+        .btn-accent {
+            background: var(--accent);
+            box-shadow: 0 6px 20px rgba(229, 62, 62, 0.3);
+        }
+
+        .btn-accent:hover {
+            background: #c53030;
+            box-shadow: 0 12px 25px rgba(229, 62, 62, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--secondary);
+            color: var(--secondary);
+            box-shadow: none;
+        }
+
+        .btn-outline:hover {
+            background: var(--secondary);
+            color: white;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: white;
+            padding: 140px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" opacity="0.03"><polygon fill="white" points="0,1000 1000,0 1000,1000"/></svg>');
+            background-size: cover;
+        }
+
+        .floating-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .shape {
+            position: absolute;
+            opacity: 0.1;
+            background: white;
+            border-radius: 50%;
+            animation: float 20s infinite linear;
+        }
+
+        .shape:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .shape:nth-child(2) {
+            width: 120px;
+            height: 120px;
+            top: 60%;
+            left: 80%;
+            animation-delay: -5s;
+        }
+
+        .shape:nth-child(3) {
+            width: 60px;
+            height: 60px;
+            top: 80%;
+            left: 20%;
+            animation-delay: -10s;
+        }
+
+        .shape:nth-child(4) {
+            width: 100px;
+            height: 100px;
+            top: 30%;
+            left: 70%;
+            animation-delay: -15s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+            }
+            100% {
+                transform: translateY(0) rotate(360deg);
+            }
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .profile-container {
+            width: 220px;
+            height: 220px;
+            margin: 0 auto 30px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 6px solid rgba(255,255,255,0.2);
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .profile-container:hover {
+            transform: scale(1.05);
+            border-color: rgba(255,255,255,0.4);
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .profile-container:hover .profile-img {
+            transform: scale(1.1);
+        }
+
+        .profile-upload {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: var(--accent);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: var(--transition);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .profile-container:hover .profile-upload {
+            opacity: 1;
+        }
+
+        .hero-content h1 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 3.2rem;
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.6rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.8);
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255,255,255,0.1);
+            padding: 12px 20px;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+
+        .contact-item:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-5px);
+        }
+
+        .contact-item i {
+            color: var(--secondary);
+            font-size: 1.3rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        nav {
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(15px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .logo i {
+            font-size: 1.5rem;
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            padding: 8px 0;
+        }
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--secondary), var(--accent));
+            border-radius: 3px;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+
+        .nav-links a.active {
+            color: var(--secondary);
+        }
+
+        .nav-links a.active:after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary);
+        }
+
+        /* About Section */
+        .about {
+            background: white;
+            position: relative;
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .about-content p {
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .philosophy-card {
+            background: var(--light);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: left;
+            border-left: 5px solid var(--secondary);
+        }
+
+        .philosophy-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .philosophy-card i {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        .philosophy-card h4 {
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        /* Qualifications Section */
+        .qualifications {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .qualifications-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tab-btn {
+            padding: 12px 25px;
+            background: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        .tab-btn.active {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .tab-btn:hover:not(.active) {
+            background: #e2e8f0;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .qualifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .qualification-card {
+            background: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .qualification-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--secondary);
+        }
+
+        .qualification-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .qualification-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .qualification-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary);
+            font-size: 1.5rem;
+        }
+
+        .qualification-date {
+            background: var(--accent);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .qualification-card h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        .qualification-card h4 {
+            color: var(--secondary);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .qualification-card ul {
+            list-style: none;
+        }
+
+        .qualification-card li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .qualification-card li:before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+        }
+
+        /* Certificates Section */
+        .certificates {
+            background: white;
+        }
+
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .certificate-item {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .certificate-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .certificate-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--accent);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+
+        .certificate-img {
+            background: #f8f9fa;
+            padding: 30px;
+            text-align: center;
+            border-bottom: 1px solid #e9ecef;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .certificate-img:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(45, 116, 218, 0.1) 0%, rgba(229, 62, 62, 0.1) 100%);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .certificate-item:hover .certificate-img:after {
+            opacity: 1;
+        }
+
+        .certificate-img img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .certificate-img img:hover {
+            transform: scale(1.05);
+        }
+
+        .certificate-info {
+            padding: 25px;
+        }
+
+        .certificate-info h4 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .certificate-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .meta-item i {
+            color: var(--secondary);
+        }
+
+        .certificate-info p {
+            margin-bottom: 10px;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Experience Section */
+        .experience {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience h2 {
+            color: white;
+        }
+
+        .experience h2:after {
+            background: white;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 3px;
+            height: 100%;
+            background: rgba(255,255,255,0.3);
+        }
+
+        .timeline-item {
+            padding: 30px;
+            margin: 40px 0;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+            width: calc(50% - 40px);
+            transition: var(--transition);
+        }
+
+        .timeline-item:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-5px);
+        }
+
+        .timeline-item:nth-child(odd) {
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        .timeline-item:nth-child(even) {
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: white;
+            box-shadow: 0 0 0 5px rgba(255,255,255,0.2);
+        }
+
+        .timeline-item:nth-child(odd):before {
+            right: -50px;
+        }
+
+        .timeline-item:nth-child(even):before {
+            left: -50px;
+        }
+
+        .timeline-item h3 {
+            color: white;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .timeline-item .date {
+            color: rgba(255,255,255,0.9);
+            font-style: italic;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .timeline-item .date i {
+            color: var(--accent);
+        }
+
+        .timeline-item ul {
+            list-style: none;
+        }
+
+        .timeline-item li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .timeline-item li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        /* Skills Section */
+        .skills {
+            background: white;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .skill-category {
+            background: var(--light);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .skill-category h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skill-category h3 i {
+            color: var(--secondary);
+        }
+
+        .skill-item {
+            margin-bottom: 20px;
+        }
+
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .skill-name {
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .skill-percentage {
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .skill-bar {
+            height: 8px;
+            background: #e2e8f0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--secondary), var(--accent));
+            border-radius: 4px;
+            width: 0;
+            transition: width 1.5s ease-in-out;
+        }
+
+        /* Publications Section */
+        .publications {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+
+        .publications h2 {
+            color: white;
+        }
+
+        .publications h2:after {
+            background: white;
+        }
+
+        .publications-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .publication-item {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            margin: 25px 0;
+            border-radius: var(--border-radius);
+            border-left: 5px solid white;
+            transition: var(--transition);
+        }
+
+        .publication-item:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateX(10px);
+        }
+
+        .publication-item h4 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .publication-meta {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .publication-tag {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: white;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            background: var(--light);
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+
+        .contact-item:hover {
+            background: #e2e8f0;
+            transform: translateY(-5px);
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            width: 40px;
+        }
+
+        .contact-details h4 {
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+
+        .contact-form {
+            background: var(--light);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            background: white;
+            font-size: 1rem;
+            transition: var(--transition);
+            font-family: 'Inter', sans-serif;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(45, 116, 218, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 70px 0 40px;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .footer-logo span {
+            color: var(--secondary);
+        }
+
+        .footer-logo i {
+            color: var(--accent);
+        }
+
+        .footer-tagline {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 1.2rem;
+        }
+
+        .social-links a:hover {
+            background: var(--secondary);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            color: rgba(255,255,255,0.5);
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 800px;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 10px;
+            animation: zoomIn 0.3s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 800px;
+            text-align: center;
+            color: #ccc;
+            padding: 15px 0;
+            font-size: 1.1rem;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: #f1f1f1;
+            font-size: 45px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .close:hover {
+            color: #bbb;
+            transform: rotate(90deg);
+        }
+
+        /* Section Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1100px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            h2 {
+                font-size: 2.4rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .timeline:before {
+                left: 30px;
+            }
+
+            .timeline-item {
+                width: calc(100% - 80px);
+                margin-left: 80px;
+            }
+
+            .timeline-item:nth-child(odd):before,
+            .timeline-item:nth-child(even):before {
+                left: -50px;
+            }
+            
+            section {
+                padding: 80px 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                flex-direction: column;
+                background: white;
+                width: 80%;
+                max-width: 300px;
+                height: calc(100vh - 70px);
+                padding: 40px 30px;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+                transition: var(--transition);
+                z-index: 1001;
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            h1 {
+                font-size: 2.4rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hero-buttons .btn {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+
+            .contact-info {
+                gap: 15px;
+            }
+            
+            .contact-item {
+                padding: 10px 15px;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .qualifications-tabs {
+                gap: 5px;
+            }
+            
+            .tab-btn {
+                padding: 10px 18px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .profile-container {
+                width: 180px;
+                height: 180px;
+            }
+            
+            .hero-content .subtitle {
+                font-size: 1.3rem;
+            }
+            
+            .tagline {
+                font-size: 1rem;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .certificates-grid,
+            .qualifications-grid,
+            .philosophy-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                Dr. <span>Mwai</span>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-links">
+                <a href="#about" class="active">About</a>
+                <a href="#qualifications">Qualifications</a>
+                <a href="#certificates">Certificates</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#publications">Research</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header/Hero Section -->
+    <header>
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="profile-section">
+                <div class="profile-container">
+                    <!-- YOUR PROFILE PHOTO - Save as images/profile.jpg -->
+                    <img src="images/profile.jpg" alt="Dr. Lillian Mwai" class="profile-img" id="profileImage">
+                    <div class="profile-upload" id="profileUpload">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                </div>
+                <h1>Dr. Lillian Wanjiru Mwai</h1>
+                <p class="subtitle">PhD Candidate | Certified Educator | Business & Finance Specialist</p>
+                <p class="tagline">Dedicated educator with extensive experience in business, finance, and academic instruction, seeking to bring interdisciplinary expertise to Ontario's educational institutions through innovative teaching methodologies and research-driven approaches.</p>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>limwai87@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+254 721 866 922</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Nairobi, Kenya</span>
+                </div>
+            </div>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn">
+                    <i class="fas fa-paper-plane"></i> Get In Touch
+                </a>
+                <a href="#certificates" class="btn btn-accent">
+                    <i class="fas fa-award"></i> View Credentials
+                </a>
+                <a href="#publications" class="btn btn-outline">
+                    <i class="fas fa-file-alt"></i> Research Portfolio
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about fade-in">
+        <div class="container">
+            <h2>Professional Profile</h2>
+            <div class="about-content">
+                <p>As an accomplished educator and finance professional with over 15 years of combined experience in academia and the banking sector, I bring a unique interdisciplinary perspective to teaching. My career has been defined by a commitment to excellence in education, innovative curriculum development, and fostering student success through practical, real-world applications of theoretical concepts.</p>
+                
+                <p>My teaching philosophy is rooted in the belief that education should be transformative, empowering students to become critical thinkers and problem solvers. I specialize in bridging the gap between theoretical knowledge and practical application, drawing from my extensive background in banking, finance, and business management to create engaging, relevant learning experiences.</p>
+
+                <p>Currently pursuing my PhD in Business Administration with a focus on financial strategies for institutional sustainability, my research interests align with my teaching practice. I am passionate about developing financial models that enhance organizational viability while ensuring equitable access to resources—a perspective I integrate into my curriculum to prepare students for the complex challenges of today's global economy.</p>
+                
+                <div class="philosophy-grid">
+                    <div class="philosophy-card">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <h4>Student-Centered Learning</h4>
+                        <p>Creating inclusive, engaging learning environments that adapt to diverse student needs and learning styles while fostering critical thinking and intellectual curiosity.</p>
+                    </div>
+                    <div class="philosophy-card">
+                        <i class="fas fa-handshake"></i>
+                        <h4>Industry Integration</h4>
+                        <p>Bridging academic theory with real-world practice through case studies, industry projects, and professional networking opportunities that prepare students for career success.</p>
+                    </div>
+                    <div class="philosophy-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Research-Informed Teaching</h4>
+                        <p>Integrating current research findings and methodologies into curriculum design to ensure content relevance and academic rigor across all teaching activities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qualifications Section -->
+    <section id="qualifications" class="qualifications fade-in">
+        <div class="container">
+            <h2>Academic Credentials</h2>
+            <div class="qualifications-tabs">
+                <button class="tab-btn active" data-tab="education">Education</button>
+                <button class="tab-btn" data-tab="certifications">Certifications</button>
+                <button class="tab-btn" data-tab="training">Professional Development</button>
+            </div>
+            
+            <div class="tab-content active" id="education-tab">
+                <div class="qualifications-grid">
+                    <div class="qualification-card">
+                        <div class="qualification-header">
+                            <div class="qualification-icon">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="qualification-date">2014-Present</div>
+                        </div>
+                        <h3>Doctor of Philosophy</h3>
+                        <h4>Business Administration & Management</h4>
+                        <p><strong>Mount Kenya University</strong></p>
+                        <ul>
+                            <li>Research Focus: Financial Strategies for Institutional Sustainability</li>
+                            <li>Thesis: "Developing Financial Models to Enhance Long-term Organizational Viability"</li>
+                            <li>Expected Completion: 2025</li>
+                            <li>Current GPA: 3.8/4.0</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="qualification-card">
+                        <div class="qualification-header">
+                            <div class="qualification-icon">
+                                <i class="fas fa-mastercard"></i>
+                            </div>
+                            <div class="qualification-date">2009-2011</div>
+                        </div>
+                        <h3>Master of Banking and Finance</h3>
+                        <h4>Microfinance Specialization</h4>
+                        <p><strong>Moi University</strong></p>
+                        <ul>
+                            <li>Second Class Honors</li>
+                            <li>Specialized in Microfinance Models and Institutional Development</li>
+                            <li>Thesis: "Impact of Microfinance on SME Growth in Eastern Kenya"</li>
+                            <li>Key Courses: Financial Markets, Corporate Finance, Banking Theory</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="qualification-card">
+                        <div class="qualification-header">
+                            <div class="qualification-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="qualification-date">2000-2003</div>
+                        </div>
+                        <h3>Bachelor of Education (Arts)</h3>
+                        <h4>Second Class Honors - Upper Division</h4>
+                        <p><strong>Kenyatta University</strong></p>
+                        <ul>
+                            <li>Major: Business Education & Finance</li>
+                            <li>Minor: Educational Psychology</li>
+                            <li>Teaching Practice: Excellence in Classroom Instruction</li>
+                            <li>Key Projects: Curriculum Development for Business Studies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="certifications-tab">
+                <div class="qualifications-grid">
+                    <div class="qualification-card">
+                        <div class="qualification-header">
+                            <div class="qualification-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="qualification-date">2020</div>
+                        </div>
+                        <h3>TEFL Certificate</h3>
+                        <h4>120 Hours - Distinction</h4>
+                        <p><strong>TEFL Professional Institute</strong></p>
+                        <ul>
+                            <li>Grade: Distinction (Top 5% of cohort)</li>
+                            <li>Specialization: Business English Instruction</li>
+                            <li>Methodologies: Communicative Approach, Task-Based Learning</li>
+                            <li>Practicum: 20 hours of observed teaching practice</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="qualification-card">
+                        <div class="qualification-header">
+                            <div class="qualification-icon">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
+                            <div class="qualification-date">2000</div>
+                        </div>
+                        <h3>Certified Public Secretary</h3>
+                        <h4>CPS Levels 1 & 2</h4>
+                        <p><strong>KASNEB</strong></p>
+                        <ul>
+                            <li>Professional certification in corporate governance</li>
+                            <li>Focus: Company law, corporate secretarial practice</li>
+                            <li>Ethics and professional standards in business</li>
+                            <li>Renewed annually through continuing education</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="qualification-card">
+                        <div class="qualification-header">
+                            <div class="qualification-icon">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <div class="qualification-date">1999</div>
+                        </div>
+                        <h3>Accounting Technician</h3>
+                        <h4>Kenya Accounting Technician Certificate</h4>
+                        <p><strong>KASNEB</strong></p>
+                        <ul>
+                            <li>Foundation in accounting principles and practices</li>
+                            <li>Financial reporting and analysis</li>
+                            <li>Taxation and auditing fundamentals</li>
+                            <li>Business mathematics and statistics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="training-tab">
+                <div class="qualifications-grid">
+                    <div class="qualification-card">
+                        <div class="qualification-header">
+                            <div class="qualification-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="qualification-date">2013</div>
+                        </div>
+                        <h3>Advanced Risk Management</h3>
+                        <h4>Financial Institutions</h4>
+                        <p><strong>Co-operative Bank of Kenya</strong></p>
+                        <ul>
+                            <li>Credit risk assessment and mitigation strategies</li>
+                            <li>Operational risk frameworks and controls</li>
+                            <li>Regulatory compliance and reporting</li>
+                            <li>Risk-based decision making in lending</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="qualification-card">
+                        <div class="qualification-header">
+                            <div class="qualification-icon">
+                                <i class="fas fa-chart-pie"></i>
+                            </div>
+                            <div class="qualification-date">2012</div>
+                        </div>
+                        <h3>Operational Efficiency & Quality Control</h3>
+                        <h4>Process Optimization</h4>
+                        <p><strong>Co-operative Bank of Kenya</strong></p>
+                        <ul>
+                            <li>Lean management principles in banking operations</li>
+                            <li>Quality assurance frameworks and metrics</li>
+                            <li>Process mapping and improvement methodologies</li>
+                            <li>Customer service excellence standards</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="qualification-card">
+                        <div class="qualification-header">
+                            <div class="qualification-icon">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <div class="qualification-date">2011</div>
+                        </div>
+                        <h3>Budget Planning & Implementation</h3>
+                        <h4>Financial Management</h4>
+                        <p><strong>Co-operative Bank of Kenya</strong></p>
+                        <ul>
+                            <li>Strategic budget development and allocation</li>
+                            <li>Financial forecasting and variance analysis</li>
+                            <li>Cost control and optimization strategies</li>
+                            <li>Performance measurement and reporting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates fade-in">
+        <div class="container">
+            <h2>Professional Certificates</h2>
+            <div class="certificates-grid">
+                <!-- TEFL Certificate -->
+                <div class="certificate-item">
+                    <div class="certificate-badge">Distinction</div>
+                    <div class="certificate-img">
+                        <img src="images/tefl-certificate.jpg" alt="TEFL Certificate - 120 Hours with Distinction" onclick="openModal(this)">
+                    </div>
+                    <div class="certificate-info">
+                        <h4>TEFL Certificate - 120 Hours</h4>
+                        <div class="certificate-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>September 2020</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>120 Hours</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-star"></i>
+                                <span>Distinction</span>
+                            </div>
+                        </div>
+                        <p><strong>Organization:</strong> TEFL Professional Institute</p>
+                        <p><strong>Focus Areas:</strong> ESL Methodologies, Lesson Planning, Classroom Management, Business English</p>
+                        <p><strong>Relevance:</strong> Qualifies to teach English as a Foreign Language in international contexts, with specialization in business and professional communication.</p>
+                    </div>
+                </div>
+
+                <!-- Master's Degree -->
+                <div class="certificate-item">
+                    <div class="certificate-badge">Honors</div>
+                    <div class="certificate-img">
+                        <img src="images/masters-degree.jpg" alt="Master of Banking and Finance" onclick="openModal(this)">
+                    </div>
+                    <div class="certificate-info">
+                        <h4>Master of Banking and Finance</h4>
+                        <div class="certificate-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>December 2011</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-university"></i>
+                                <span>Moi University</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-award"></i>
+                                <span>Second Class</span>
+                            </div>
+                        </div>
+                        <p><strong>Specialization:</strong> Microfinance</p>
+                        <p><strong>Key Achievements:</strong> Research on microfinance impact, coursework in advanced financial theory, completion of comprehensive examinations</p>
+                        <p><strong>Relevance:</strong> Advanced knowledge in banking operations, financial markets, and microfinance institutions applicable to both academic and industry contexts.</p>
+                    </div>
+                </div>
+
+                <!-- Bachelor's Degree -->
+                <div class="certificate-item">
+                    <div class="certificate-badge">Upper Division</div>
+                    <div class="certificate-img">
+                        <img src="images/bachelor-degree.jpg" alt="Bachelor of Education (Arts)" onclick="openModal(this)">
+                    </div>
+                    <div class="certificate-info">
+                        <h4>Bachelor of Education (Arts)</h4>
+                        <div class="certificate-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>2003</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-university"></i>
+                                <span>Kenyatta University</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-award"></i>
+                                <span>Second Class Upper</span>
+                            </div>
+                        </div>
+                        <p><strong>Duration:</strong> 4 Years (2000-2003)</p>
+                        <p><strong>Major:</strong> Business Education with specialization in Accounting and Finance</p>
+                        <p><strong>Teaching Practice:</strong> Completed supervised teaching practice in secondary schools, developing lesson plans and assessment strategies.</p>
+                    </div>
+                </div>
+
+                <!-- CPS Certification -->
+                <div class="certificate-item">
+                    <div class="certificate-badge">Professional</div>
+                    <div class="certificate-img">
+                        <img src="images/cps-certificate.jpg" alt="Certified Public Secretary" onclick="openModal(this)">
+                    </div>
+                    <div class="certificate-info">
+                        <h4>Certified Public Secretary</h4>
+                        <div class="certificate-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>2000</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-gem"></i>
+                                <span>KASNEB</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-layer-group"></i>
+                                <span>Levels 1 & 2</span>
+                            </div>
+                        </div>
+                        <p><strong>Status:</strong> Professional Certification</p>
+                        <p><strong>Focus Areas:</strong> Corporate governance, company law, secretarial practice, business ethics</p>
+                        <p><strong>Relevance:</strong> Demonstrates expertise in corporate administration and governance, enhancing credibility in business education and consultancy.</p>
+                    </div>
+                </div>
+
+                <!-- KCSE Certificate -->
+                <div class="certificate-item">
+                    <div class="certificate-badge">B- (Minus)</div>
+                    <div class="certificate-img">
+                        <img src="images/kcse-certificate.jpg" alt="Kenya Certificate of Secondary Education" onclick="openModal(this)">
+                    </div>
+                    <div class="certificate-info">
+                        <h4>KCSE Certificate</h4>
+                        <div class="certificate-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>1998</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-school"></i>
+                                <span>Nakuru High School</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-chart-bar"></i>
+                                <span>Mean Grade B-</span>
+                            </div>
+                        </div>
+                        <p><strong>Subjects:</strong> 8 Subjects including English, Mathematics, Biology, Chemistry, Geography, Social Education & Ethics, French</p>
+                        <p><strong>Notable Achievements:</strong> Excellence in Social Education & Ethics (Grade A), Strong performance in Languages and Sciences</p>
+                        <p><strong>Foundation:</strong> Provided strong academic foundation for university studies in education and business.</p>
+                    </div>
+                </div>
+
+                <!-- PhD Transcript -->
+                <div class="certificate-item">
+                    <div class="certificate-badge">In Progress</div>
+                    <div class="certificate-img">
+                        <img src="images/phd-transcript.jpg" alt="PhD in Business Administration Transcript" onclick="openModal(this)">
+                    </div>
+                    <div class="certificate-info">
+                        <h4>PhD in Business Administration</h4>
+                        <div class="certificate-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>2014-Present</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-university"></i>
+                                <span>Mount Kenya University</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-tasks"></i>
+                                <span>Coursework Completed</span>
+                            </div>
+                        </div>
+                        <p><strong>Research Area:</strong> Financial Strategies & Institutional Sustainability</p>
+                        <p><strong>Current Status:</strong> Dissertation phase, expected completion 2025</p>
+                        <p><strong>Academic Performance:</strong> Consistently high grades in doctoral coursework, active participation in academic conferences and seminars</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience fade-in">
+        <div class="container">
+            <h2>Professional Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Part-Time Lecturer <span class="badge">Current</span></h3>
+                    <p class="date"><i class="fas fa-calendar-alt"></i> 2020 – Present</p>
+                    <p><strong>Mount Kenya University, Nairobi Campus</strong></p>
+                    <ul>
+                        <li>Develop and deliver engaging lectures in Banking, Finance, and Business Management to undergraduate and postgraduate students</li>
+                        <li>Design comprehensive course materials, including syllabi, lesson plans, and assessment tools aligned with industry standards</li>
+                        <li>Mentor students in academic research, thesis development, and professional career planning</li>
+                        <li>Contribute to curriculum development and program enhancement initiatives within the Business School</li>
+                        <li>Supervise student projects and provide detailed feedback to foster academic growth</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item">
+                    <h3>Marketing Manager</h3>
+                    <p class="date"><i class="fas fa-calendar-alt"></i> 2014 – Present</p>
+                    <p><strong>Haute Suites, Nairobi</strong></p>
+                    <ul>
+                        <li>Develop and implement strategic marketing approaches for luxury real estate developments</li>
+                        <li>Drive business expansion through targeted client acquisition and relationship management strategies</li>
+                        <li>Recruit, train, and mentor high-performing sales teams, implementing performance metrics</li>
+                        <li>Analyze market trends and competitor activity to inform strategic decision-making</li>
+                        <li>Manage marketing budgets and measure ROI across various channels and campaigns</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Manager, Business Support Services</h3>
+                    <p class="date"><i class="fas fa-calendar-alt"></i> 2012 – 2014</p>
+                    <p><strong>Co-operative Bank of Kenya, Headquarters</strong></p>
+                    <ul>
+                        <li>Orchestrated comprehensive testing processes for new banking systems and products</li>
+                        <li>Centralized voucher checking operations to enhance branch efficiency and customer service focus</li>
+                        <li>Delivered comprehensive staff training on new Sybrin banking system implementation</li>
+                        <li>Developed and implemented quality assurance frameworks for operational processes</li>
+                        <li>Collaborated with cross-functional teams to streamline operations and reduce processing times</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h3>Customer Service Manager</h3>
+                    <p class="date"><i class="fas fa-calendar-alt"></i> 2011 – 2012</p>
+                    <p><strong>Co-operative Bank of Kenya, University Way Branch</strong></p>
+                    <ul>
+                        <li>Managed key relationships with Cooperative Societies, SMEs, and corporate clients</li>
+                        <li>Forged strategic partnerships with multiple SACCOs, driving substantial business growth</li>
+                        <li>Championed customer-centric culture, implementing service excellence standards</li>
+                        <li>Developed and delivered training programs for new staff on customer service protocols</li>
+                        <li>Resolved complex customer issues, maintaining high satisfaction ratings</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills fade-in">
+        <div class="container">
+            <h2>Professional Competencies</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3><i class="fas fa-chalkboard-teacher"></i> Teaching & Pedagogy</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Curriculum Development</span>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="95"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Instructional Design</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Student Assessment</span>
+                            <span class="skill-percentage">92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="92"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Classroom Management</span>
+                            <span class="skill-percentage">88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="88"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-chart-line"></i> Finance & Business</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Financial Analysis</span>
+                            <span class="skill-percentage">94%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="94"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Strategic Planning</span>
+                            <span class="skill-percentage">89%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="89"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Risk Management</span>
+                            <span class="skill-percentage">91%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="91"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Microfinance Operations</span>
+                            <span class="skill-percentage">93%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="93"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Professional Skills</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Research Methodology</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Leadership & Mentoring</span>
+                            <span class="skill-percentage">87%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="87"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Communication Skills</span>
+                            <span class="skill-percentage">96%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="96"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Project Management</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="publications fade-in">
+        <div class="container">
+            <h2>Research & Publications</h2>
+            <div class="publications-container">
+                <div class="publication-item">
+                    <h4>Assessment of Micro Financial Institution Funding on the Performance of Small and Medium-Sized Enterprises in Muranga County</h4>
+                    <div class="publication-meta">
+                        <span class="publication-tag">Academic Research</span>
+                        <span class="publication-tag">Microfinance</span>
+                        <span class="publication-tag">SME Development</span>
+                    </div>
+                    <p>This comprehensive study examines the relationship between microfinance funding and the growth metrics of small and medium-sized enterprises in Muranga County, Kenya. The research employs mixed-methods approaches, combining quantitative analysis of financial data with qualitative interviews with SME owners to provide nuanced insights into funding accessibility and its impact on business sustainability.</p>
+                </div>
+                
+                <div class="publication-item">
+                    <h4>Determinants of Access to Credit from Micro Finance Institutions: A Case Study of Nairobi CBD</h4>
+                    <div class="publication-meta">
+                        <span class="publication-tag">Academic Research</span>
+                        <span class="publication-tag">Credit Access</span>
+                        <span class="publication-tag">Financial Inclusion</span>
+                    </div>
+                    <p>An in-depth analysis of factors influencing credit accessibility from microfinance institutions in Nairobi's Central Business District. The study identifies key determinants including business documentation, credit history, and demographic factors, proposing a framework for enhancing financial inclusion among urban small business owners through targeted policy interventions and financial literacy programs.</p>
+                </div>
+
+                <div class="publication-item">
+                    <h4>PhD Research: Financial Strategies for Institutional Sustainability</h4>
+                    <div class="publication-meta">
+                        <span class="publication-tag">Doctoral Dissertation</span>
+                        <span class="publication-tag">In Progress</span>
+                        <span class="publication-tag">Financial Modeling</span>
+                    </div>
+                    <p>My ongoing doctoral research focuses on developing innovative financial models to enhance long-term institutional viability and growth. The study examines case studies from both for-profit and non-profit organizations, analyzing how strategic financial planning, resource allocation, and risk management contribute to sustainable organizational development in dynamic economic environments.</p>
+                </div>
+
+                <div class="publication-item">
+                    <h4>Integrating Industry Practice into Business Education: A Framework for Enhanced Student Employability</h4>
+                    <div class="publication-meta">
+                        <span class="publication-tag">Pedagogical Research</span>
+                        <span class="publication-tag">Curriculum Development</span>
+                        <span class="publication-tag">Employability</span>
+                    </div>
+                    <p>This pedagogical study proposes a comprehensive framework for integrating real-world industry practices into business education curricula. Drawing from my extensive experience in both academia and the banking sector, the research outlines strategies for bridging the theory-practice gap through case studies, industry partnerships, and experiential learning opportunities that enhance student readiness for professional careers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact fade-in">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>I'm actively seeking teaching opportunities in Ontario and would welcome the chance to discuss how my qualifications and experience align with your institution's needs. Please feel free to reach out through any of the following channels:</p>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>limwai87@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+254 721 866 922</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Nairobi, Kenya<br>P.O. Box 4477-00100</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div class="contact-details">
+                            <h4>Availability</h4>
+                            <p>Open to relocation opportunities<br>Available for interviews via Zoom/Skype</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" placeholder="Your Full Name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="Your Email Address" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="organization">Organization</label>
+                            <input type="text" id="organization" placeholder="Your School/Organization" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" required>
+                                <option value="" disabled selected>Select a subject</option>
+                                <option value="teaching-opportunity">Teaching Opportunity</option>
+                                <option value="research-collaboration">Research Collaboration</option>
+                                <option value="consultation">Professional Consultation</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="6" placeholder="Your detailed message..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    Dr. <span>Mwai</span>
+                </div>
+                <p class="footer-tagline">Educator | Researcher | Finance Specialist | Advocate for Transformative Learning</p>
+                
+                <div class="social-links">
+                    <a href="mailto:limwai87@gmail.com" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="tel:+254721866922" title="Phone">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                    <a href="https://wa.me/254721866922" target="_blank" title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="#" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" title="ResearchGate">
+                        <i class="fab fa-researchgate"></i>
+                    </a>
+                </div>
+                
+                <p class="copyright">&copy; 2024 Dr. Lillian Wanjiru Mwai. All rights reserved.<br>Designed for Canadian teaching opportunities.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Certificate Modal -->
+    <div id="certificateModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Tab functionality for qualifications
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons and contents
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked button
+                btn.classList.add('active');
+                
+                // Show corresponding content
+                const tabId = btn.getAttribute('data-tab') + '-tab';
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Modal functionality for certificate images
+        function openModal(img) {
+            const modal = document.getElementById("certificateModal");
+            const modalImg = document.getElementById("modalImage");
+            const captionText = document.getElementById("caption");
+            
+            modal.style.display = "block";
+            modalImg.src = img.src;
+            captionText.innerHTML = img.alt;
+        }
+        
+        function closeModal() {
+            document.getElementById("certificateModal").style.display = "none";
+        }
+        
+        // Close modal when clicking outside the image
+        document.getElementById('certificateModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+        
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const organization = document.getElementById('organization').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Create mailto link
+            const subjectLine = `Portfolio Inquiry: ${subject} from ${name}`;
+            const body = `Name: ${name}%0AEmail: ${email}%0AOrganization: ${organization}%0ASubject: ${subject}%0A%0AMessage:%0A${message}`;
+            const mailtoLink = `mailto:limwai87@gmail.com?subject=${encodeURIComponent(subjectLine)}&body=${encodeURIComponent(body)}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Reset form
+            this.reset();
+            
+            // Show confirmation
+            setTimeout(() => {
+                alert('Thank you for your message! Your email client will open with your message ready to send.');
+            }, 500);
+        });
+        
+        // Navbar background on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.background = 'rgba(255,255,255,0.98)';
+                nav.style.boxShadow = '0 5px 20px rgba(0,0,0,0.1)';
+            } else {
+                nav.style.background = 'rgba(255,255,255,0.97)';
+                nav.style.boxShadow = '0 5px 20px rgba(0,0,0,0.08)';
+            }
+            
+            // Update active nav link based on scroll position
+            updateActiveNavLink();
+        });
+        
+        // Update active navigation link based on scroll position
+        function updateActiveNavLink() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        
+        // Fade in animation on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    
+                    // Animate skill bars if this is the skills section
+                    if (entry.target.id === 'skills') {
+                        animateSkillBars();
+                    }
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        fadeElements.forEach(element => {
+            fadeInObserver.observe(element);
+        });
+        
+        // Animate skill bars
+        function animateSkillBars() {
+            const skillBars = document.querySelectorAll('.skill-progress');
+            skillBars.forEach(bar => {
+                const width = bar.getAttribute('data-width');
+                setTimeout(() => {
+                    bar.style.width = width + '%';
+                }, 200);
+            });
+        }
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Profile photo upload simulation
+        document.getElementById('profileUpload').addEventListener('click', function() {
+            alert('In a real implementation, this would open a file picker to upload your profile photo. For now, please save your photo as "profile.jpg" in the "images" folder.');
+        });
+    </script>
+</body>
+</html>
